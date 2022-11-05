@@ -26,7 +26,7 @@ Dists = [Unif, Gauss, Levy, Exp]
 
 function initialize(; n_agents = 1, extent = (100, 100))
     space = ContinuousSpace(extent; spacing = 0.1, periodic = true)
-    scheduler = Schedulers.randomly
+    scheduler = Schedulers.randomly # write own eventually
     model = AgentBasedModel(Walker, space; scheduler)
 
     # Adding the Walkers
